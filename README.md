@@ -20,7 +20,8 @@ O projeto contém duas classes principais:
 -**Criação da Fila no LocalStack:**  Inicialmente, criei uma fila chamada solutis-tech-queue através do console do LocalStack.
 -**Configuração do projeto:** Atualizei o código para utilizar o SDK da AWS e configurar corretamente o SqsClient com o endpointOverride do LocalStack e a região AWS.
 
--Detalhes da configuração:
+-***Detalhes da configuração***:
+
 -**Dependências Atualizadas:** Além do código, as dependências do projeto (bibliotecas necessárias para rodar o código) também precisam incluir o SDK correto da AWS para garantir que o SqsClient funcione adequadamente. No pom.xml, foi incluída a versão mais recente do SDK.
 - **Importação de `java.net.URI`:** Foi adicionada a importação da classe `URI` para configurar corretamente o endpoint do LocalStack.
 - **Configuração do Endpoint:** A configuração do cliente `SqsClient` foi atualizada para incluir o endpoint do LocalStack. Isso permite que o cliente se conecte ao emulador local -  essa configuração basicamente diz ao SqsClient para substituir o endpoint padrão da AWS (normalmente algo como sqs.us-east-1.amazonaws.com) pelo endpoint do LocalStack, que no seu caso é http://localhost:4566.
