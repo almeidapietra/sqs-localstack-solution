@@ -18,6 +18,7 @@ O projeto contém duas classes principais:
 ### Configuração
 
 -**Criação da Fila no LocalStack:**  Inicialmente, criei uma fila chamada solutis-tech-queue através do console do LocalStack.
+
 -**Configuração do projeto:** Atualizei o código para utilizar o SDK da AWS e configurar corretamente o SqsClient com o endpointOverride do LocalStack e a região AWS.
 
 -***Detalhes da configuração***:
@@ -36,9 +37,12 @@ O projeto contém duas classes principais:
 
 ### Evidência de funcionamento:
 
-[<img src="./src/assets/evidencia-sqs.jpeg" alt="print com evicência de funcionamento">]
+<img src="./src/assets/evidencia-sqs.jpeg" alt="print com evicência de funcionamento">
 
 --------------------
+
+Resumo:
+A principal atualização no código foi garantir que o cliente SQS (SqsClient) soubesse que ele deve enviar as requisições para o LocalStack em vez da AWS real, configurando a URL correta (http://localhost:4566) e mantendo a região AWS configurada (por exemplo, US_EAST_1). Isso é essencial para que, durante o desenvolvimento, o código possa ser testado localmente antes de fazer deploy em uma conta real da AWS.
 
 ## contatos:
 <div> 
